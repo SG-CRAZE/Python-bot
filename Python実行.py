@@ -10,7 +10,7 @@ try:
     intents = discord.Intents.default()
     intents.message_content = True
 
-    bot = commands.Bot(command_prefix='/', intents=intents)
+    bot = commands.Bot(command_prefix='!', intents=intents)
 
     @bot.command(name="run")
     async def run(ctx):
@@ -62,3 +62,4 @@ except Exception as e:
     with open("error.log", "w") as f:
         f.write(traceback.format_exc())
     input("エラーが発生しました。Enterを押すと終了します。")
+
